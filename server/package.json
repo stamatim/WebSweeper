@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Back-end server for Web-sweeper project",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "group-11",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mysql": "^2.16.0",
+    "nodemon": "^1.18.11"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.2"
+  }
+}

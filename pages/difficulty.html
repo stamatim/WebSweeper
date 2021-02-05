@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WS - Difficulty</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="difficulty.css"> <!-- Link to CSS -->
+</head>
+
+<body>
+    <div class="container-header">
+        <div class="header">
+            <h1>Select Difficulty</h1>
+        </div>
+    </div>
+    <div class="container-difficulty">
+        <div class="difficulty">
+            <form id="selected-difficulty">
+                <input type="radio" name="difficulty" value="easy" checked> Easy<br>
+                <input type="radio" name="difficulty" value="medium"> Medium<br>
+                <input type="radio" name="difficulty" value="hard"> Hard<br>
+                <input type="radio" name="difficulty" value="extreme"> Extreme<br>
+                <input type="radio" name="difficulty" value="psycho"> Psycho<br>
+            </form>
+            <script type="text/javascript">
+                document.getElementById("submit-difficulty").onclick = function () {
+                    let difficulty = document.getElementById("selected-difficulty").value;
+                    
+                }
+            </script>
+            <button id="submit" class="submit-difficulty">Select Difficulty</button>
+            <button id="return-to-menu">Back to Main Menu</button>
+            <script type="text/javascript">
+                document.getElementById("return-to-menu").onclick = function () {
+                    location.href = "mainmenu.html";
+                };
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>

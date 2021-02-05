@@ -1,0 +1,39 @@
+{
+  "name": "web-sweeper",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:5000",
+  "dependencies": {
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5",
+    "react-scripts": "^3.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "server": "node-env-run server --exec nodemon",
+    "dev": "run-p server start"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "//": "proxy for backend server connection",
+  "proxy": "http://cs319-121.misc.iastate.edu:5000",
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "express-pino-logger": "^4.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^1.18.11",
+    "npm-run-all": "^4.1.5",
+    "pino-colada": "^1.4.4"
+  }
+}

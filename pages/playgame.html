@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web-Sweeper</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="playgame.css"> <!-- Link to CSS -->
+    </head>
+    <body>
+        <div class="container-header">
+            <div class="header">
+                <h1>Web-Sweeper</h1>
+                <p>Game started, try to score as low as possible. Try not to hit the mines...</p>
+            </div>
+        </div>
+        <div id='score-counter'>
+            <script type="text/javascript">
+                import ServerApi from './ServerApi'
+                let score = 0;
+                let el = document.getElementById('score-counter');
+
+                function setDifficulty() {
+                    let difficulty = prompt("Enter the level of difficulty (1-5)", "1");
+                    let api = new ServerApi();
+                    switch(difficulty) {
+                        case 1:
+                            api.getNewGame(Easy);
+                            break;
+                        case 2:
+                            api.getNewGame(Medium);
+                            break;
+                        case 3:
+                            api.getNewGame(Hard);
+                            break;
+                        case 4: 
+                            api.getNewGame(Extreme);
+                            break;
+                        case 5: 
+                            api.getNewGame(Psycho);
+                            break;
+                        default:
+                            api.getNewGame(Easy);
+                    }
+                }
+
+                function incrementScore() {
+                    score += 1;
+                    el.innerText = "Score: " + score;
+                }
+                setInterval(incrementScore, 1000);
+            </script>
+        </div>
+        <div class="container-game">
+            <script type="text/javascript" src="../src/index.js"></script>
+        </div>
+    </body>
+</html>
